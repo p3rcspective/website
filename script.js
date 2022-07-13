@@ -1,11 +1,3 @@
-/*
-Most of the stuff in here is just bootstrapping. Essentially it's just
-setting ThreeJS up so that it renders a flat surface upon which to draw 
-the shader. The only thing to see here really is the uniforms sent to 
-the shader. Apart from that all of the magic happens in the HTML view
-under the fragment shader.
-*/
-
 let container;
 let camera, scene, renderer;
 let uniforms;
