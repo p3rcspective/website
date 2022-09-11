@@ -23,13 +23,13 @@
 
         renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
         renderer.physicallyCorrectLights = true;
         renderer.outputEncoding = THREE.sRGBEncoding;
         renderer.toneMapping = THREE.CineonToneMapping;
         renderer.toneMappingExposure = 1.75;
         renderer.shadowMap.enabled = true;
-        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-        document.body.appendChild(renderer.domElement);
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
         let loader = new THREE.GLTFLoader();
         loader.load("scene.gltf", function(gltf) {
