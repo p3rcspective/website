@@ -29,6 +29,16 @@
         loader.load("scene.gltf", function(gltf) {
           let mesh = gltf.scene.children[0];
           mesh.scale.set(100,100,100);
+          const material = new THREE.MeshPhysicalMaterial({})
+          material.reflectivity = 0
+          material.transmission = 1.0
+          material.roughness = 0.2
+          material.metalness = 0
+          material.clearcoat = 0.3
+          material.clearcoatRoughness = 0.25
+          material.color = new THREE.Color(0xffffff)
+          material.ior = 1.2
+          material.thickness = 10.0
           scene.add(gltf.scene);
         });
 
