@@ -31,8 +31,6 @@
         renderer.toneMappingExposure = 1.75;
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-        renderer.setSize(this.sizes.width, this.sizes.height);
-        renderer.setPixelRatio(this.sizes.pixelRatio);
         document.body.appendChild(renderer.domElement);
 
         let loader = new THREE.GLTFLoader();
