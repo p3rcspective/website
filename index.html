@@ -23,6 +23,9 @@
 
         renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.physicallyCorrectLights = true
+        renderer.shadowMap.enabled = true
+        renderer.outputEncoding = THREE.sRGBEncoding
         document.body.appendChild(renderer.domElement);
 
         let loader = new THREE.GLTFLoader();
