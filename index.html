@@ -21,11 +21,18 @@
         camera.position.y = 100;
         camera.position.z = 250;
 
-        renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.physicallyCorrectLights = true
-        renderer.shadowMap.enabled = true
-        renderer.outputEncoding = THREE.sRGBEncoding
+        renderer = new THREE.WebGLRenderer({
+            canvas: this.canvas,
+            antialias: true,
+        });
+        renderer.physicallyCorrectLights = true;
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        renderer.toneMapping = THREE.CineonToneMapping;
+        renderer.toneMappingExposure = 1.75;
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.setSize(this.sizes.width, this.sizes.height);
+        renderer.setPixelRatio(this.sizes.pixelRatio);
         document.body.appendChild(renderer.domElement);
 
         let loader = new THREE.GLTFLoader();
