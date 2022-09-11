@@ -14,7 +14,7 @@
 
       function init() {
         scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x000000);
+        scene.background = new THREE.Color(0xdddddd);
 
         camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 5000);
         camera.position.x = 300;
@@ -22,9 +22,9 @@
         camera.position.z = 250;
 
         renderer = new THREE.WebGLRenderer();
+        renderer.physicallyCorrectLights = true;
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
-        renderer.physicallyCorrectLights = true;
 
         let loader = new THREE.GLTFLoader();
         loader.load("scene.gltf", function(gltf) {
