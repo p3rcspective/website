@@ -30,6 +30,11 @@
 
         let loader = new THREE.GLTFLoader();
         loader.load("scene.gltf", function(gltf) {
+                   if ((child as THREE.Mesh).isMesh) {
+                   const m = (child as THREE.Mesh)
+                   m.receiveShadow = true
+                   m.castShadow = true
+              } {
           let mesh = gltf.scene.children[0];
           mesh.scale.set(100,100,100);
           scene.add(gltf.scene);
