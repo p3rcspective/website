@@ -21,10 +21,8 @@
         camera.position.y = 100;
         camera.position.z = 250;
 
-        renderer = new THREE.WebGLRenderer({
-            canvas: this.canvas,
-            antialias: true,
-        });
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.physicallyCorrectLights = true;
         renderer.outputEncoding = THREE.sRGBEncoding;
         renderer.toneMapping = THREE.CineonToneMapping;
