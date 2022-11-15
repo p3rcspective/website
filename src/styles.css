@@ -78,10 +78,11 @@ overflow: auto;
 .text-center {
     color: var(--secondary-color);
     font-family: 'OffBit';
-    display: flex;
+    display: inline;
+    font-size: 2vw;
     margin: 0;
-    max-width: 16px;
-    font-size: xx-large;
+    white-space: pre-wrap;
+    max-width: 560px;
     text-align: center;
     justify-content: center;
     position: absolute;
@@ -97,7 +98,7 @@ overflow: auto;
 #p3rcspective{
     color: var(--p3rcspective-color);
     font-family: 'Offbit Bold' ;
-    font-size: 98px;
+    font-size: 6vw;
 }
 
 /*footer*/

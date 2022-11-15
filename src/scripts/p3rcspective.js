@@ -1,5 +1,5 @@
 
-var string = "p3rcspective!"; /* text */
+var string = "p3rcspective✓"; /* text */
 var array = string.split("");
 var timer;
 
@@ -9,7 +9,7 @@ function frameLooper () {
 	} else {
 		clearTimeout(timer);
 			}
-	loopTimer = setTimeout('frameLooper()',500); /* speed */
+	loopTimer = setTimeout('frameLooper()',350); /* speed */
 
 }
 frameLooper();
