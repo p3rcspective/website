@@ -80,7 +80,7 @@ overflow: auto;
     color: var(--secondary-color);
     font-family: 'OffBit';
     display: inline;
-    font-size: 2vh;
+    font-size: 4vh;
     margin: 0;
     white-space: pre-wrap;
     max-width: 560px;
