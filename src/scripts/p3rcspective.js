@@ -9,7 +9,7 @@ function frameLooper () {
 	} else {
 		clearTimeout(timer);
 			}
-	loopTimer = setTimeout('frameLooper()',350); /* speed */
+	loopTimer = setTimeout('frameLooper()',200); /* speed */
 
 }
 frameLooper();
