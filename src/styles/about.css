@@ -1,0 +1,196 @@
+
+:root {
+    --primary-color:#070D0D;
+    --secondary-color:#f5f5f5;
+    --p3rcspective-color:#FF453AFF;
+    --hover-color: #FF3B30FF;
+    --bg-color: #070D0D;
+    --grey-color: #808080;
+    --active-link-color: #FF3B30FF;
+    --active-link-hover-color: #f5f5f5;
+}
+[data-theme="dark"] {
+    --primary-color: #f5f5f5;
+    --secondary-color: #070D0D;
+    --p3rcspective-color:#0A84FFFF;
+    --hover-color:#007AFFFF;
+    --bg-color:#f5f5f5;
+    --grey-color: #808080;
+    --active-link-color: #007AFFFF;
+    --active-link-hover-color: #070D0D;
+}
+
+/*fonts*/
+
+@font-face {
+    font-family: 'Regular';
+    src: url('/src/fonts/Regular.woff2') format('woff2'),
+        url('/src/fonts/Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: url('/src/fonts/Bold.woff2') format('woff2'),
+        url('/src/fonts/Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*main*/
+body{
+background-color: var(--bg-color);
+-webkit-transition: var(--bg-color) 1000ms linear;
+-ms-transition: background-color 1000ms linear;
+margin: 0;
+transition: background-color 1000ms linear;
+overflow: auto;
+}
+
+/*nav*/
+
+.nav{
+    background-color: transparent;
+    display: flex;
+    list-style:none;
+    text-decoration: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 32px;
+    position: sticky;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    text-decoration: none;
+    font-family: 'Regular';
+    font-size: 32px;
+    color: var(--secondary-color);
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/*content*/
+
+
+
+/*footer*/
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0px;
+}
+footer a{
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-family: 'Regular';
+    text-decoration: none;
+    list-style: none;
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+footer .left-align{
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+   padding: 0px 32px;
+   word-spacing: 12px;
+}
+footer .theme-switch-wrapper{
+padding: 0px 32px;
+}
+
+/*unique*/
+
+a:hover {
+    color: var(--hover-color);
+    font-family: 'Bold';
+}
+a.active {
+    font-family: 'Bold';
+    color: var(--active-link-color);
+
+}
+a.active:hover {
+    font-family: 'Bold';
+    color: var(--active-link-hover-color);
+}
+a.email:after {
+    content: 'email';
+}
+a.email:hover:after {
+    content: 'p3rcspective@gmail.com';
+}
+
+/*toggle theme*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+
+}
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+.theme-switch input {
+    display:none;
+}
+.slider {
+    background-image: url("/src/images/theme-toggle/gb.png");
+    background-color: transparent;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+
+    
+}
+  
+.slider:before {
+    background-image: url("/src/images/theme-toggle/wb-light.png");
+    background-color: transparent;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+input:checked + .slider {
+    background-image: url("/src/images/theme-toggle/bb.png");
+    background-color: transparent;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-image: url("/src/images/theme-toggle/wb-dark.png");
+    background-color: transparent;
+}
+
+
+
+/*media rules*/
