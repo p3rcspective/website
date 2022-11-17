@@ -45,12 +45,13 @@
 
 /*main*/
 body{
+min-height: 100vh;
 background-color: var(--bg-color);
 -webkit-transition: var(--bg-color) 1000ms linear;
 -ms-transition: background-color 1000ms linear;
 margin: 0;
 transition: background-color 1000ms linear;
-overflow: visible
+overflow: hidden
 }
 
 /*nav*/
