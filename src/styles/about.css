@@ -49,9 +49,13 @@ min-height: 100vh;
 background-color: var(--bg-color);
 -webkit-transition: var(--bg-color) 1000ms linear;
 -ms-transition: background-color 1000ms linear;
-margin: 0;
+margin: 0 auto;
 transition: background-color 1000ms linear;
-overflow: hidden
+overflow: hidden;
+display: block;
+}
+main {
+    min-height: 100vh;
 }
 
 /*nav*/
