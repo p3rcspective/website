@@ -95,9 +95,9 @@ overflow: visible
     text-align: center;
     justify-content: center;
     position: absolute;
-    max-width: 700px;
-    max-height: 700px;
-    overflow-y: scroll;
+    max-width: 80vh;
+    max-height: 50vh;
+    overflow-y: auto;
     top: 50%;
     left:50%;
     transform: translateX(-50%) translateY(-50%);
@@ -115,16 +115,18 @@ overflow: visible
 
 /*download*/
 
-.download-button {
+.download-button a {
     color: var(--secondary-color);
     font-family: 'Regular';
     display: inline;
+    text-decoration: underline;
+    list-style: none;
     font-size: 48px;
-    margin: 0;
     text-align: center;
     justify-content: center;
     position: absolute;
     bottom: 0%;
+    padding: 16px 0px;
     left:50%;
     transform: translateX(-50%) translateY(-50%);
     user-select: none; /* supported by Chrome and Opera */
