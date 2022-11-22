@@ -9,7 +9,7 @@
     --grey-color: #808080;
     --scrollbar-color:#808080;
     --scrollbar-hover-color:#4f4f4f;
-    --active-link-color: #ff3b30;
+    --active-link-color: #ff382e;
     --active-link-hover-color: #be000c;
 }
 [data-theme="dark"]{
@@ -305,20 +305,26 @@ input:checked + .slider:before{
     }
     .download-mobile{
         display: flex;
-        content: "";
         position: relative;
     }
-    a.test{
+    a.mobile-img{
         position: relative;
         width: 32px;
         height: 32px;
-        background-image: url("/src/images/main/download-w.png");
     }
-    a.test:hover{
-        background-image: url("/src/images/main/download-r.png");
+    svg#download{
+        width: 32px;
+        height: 32px;
     }
-    a.test:active{
-        background-image: url("/src/images/main/download-dr.png");
-        top: 2px;
+    .download-button{
+        fill: var(--secondary-color);
+        background: transparent;
+    }
+    .download-button:hover{
+        fill: var(--hover-color);
+    }
+    .download-button:active{
+        fill: var(--active-link-hover-color);
+        transform: translate(0px, 2px);
     }
 }
