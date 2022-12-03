@@ -319,7 +319,7 @@ input:checked + .slider:before{
     /*nav*/
 
     .nav-web a{
-        font-size: calc(1em + 1vw);
+        font-size: calc(1.1em + 1.1vw);
     }
 
     /*download button web*/
