@@ -253,6 +253,11 @@ input:checked + .slider:before{
         grid-template-columns: 1fr 1fr;
     }
 
+    .main .gif{
+        max-width: 8rem;
+        margin: auto;
+    }
+
     /*footer left align*/
 
     footer.main .web-left-align{
